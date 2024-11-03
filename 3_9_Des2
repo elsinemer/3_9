@@ -1,0 +1,20 @@
+# Importamos el módulo procesador_texto
+import procesador_texto
+
+def resaltar_todas_ocurrencias(texto, palabra_clave):
+    # Usamos la función resaltar del módulo para cada ocurrencia de la palabra clave en el texto
+    texto_resaltado = texto.replace(palabra_clave, procesador_texto.resaltar(palabra_clave))
+    return texto_resaltado
+
+# Texto de ejemplo
+texto_largo = """Este es un texto de prueba que contiene varias palabras clave. 
+La palabra clave se repite en el texto para resaltar la importancia de la palabra clave."""
+
+# Palabra clave a resaltar
+palabra_clave = "palabra clave"
+
+# Llamamos a la función
+resultado = resaltar_todas_ocurrencias(texto_largo, palabra_clave)
+
+# Imprimimos el resultado
+print(resultado)
