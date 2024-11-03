@@ -1,0 +1,15 @@
+def invertir_palabras(oracion):
+    # Caso base: si la oración está vacía o tiene solo una palabra, se retorna tal cual
+    if ' ' not in oracion:
+        return oracion
+
+    # Encuentra el primer espacio
+    espacio_index = oracion.find(' ')
+
+    # Llama recursivamente con el resto de la oración después del primer espacio
+    return invertir_palabras(oracion[espacio_index + 1:]) + ' ' + oracion[:espacio_index]
+
+# Prueba la función
+oracion = "Prueba programa"
+resultado = invertir_palabras(oracion)
+print(resultado)  # Salida esperada: "programa Prueba"
