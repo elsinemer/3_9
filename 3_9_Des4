@@ -1,0 +1,12 @@
+def contar_platanos(n, total=0):
+    if n == 0:
+        # Si no hay más plátanos que contar, devuelve el total acumulado.
+        return total
+    else:
+        # El mono cuenta un plátano y se olvida, pero acumula el conteo.
+        return contar_platanos(n - 1, total + 1)
+
+# Ejemplo de uso:
+platanos_en_pila = 5
+resultado = contar_platanos(platanos_en_pila)
+print(f"El total de plátanos contados por el mono es: {resultado}")
